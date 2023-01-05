@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Servicii</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/footer.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="java/jquery.js"></script>
+</head>
+<style>
+    	@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+        html,body{
+    overflow: auto;
+	font-family: 'Bebas Neue', cursive !important;
+  background: #1e1e22;
+background: -webkit-linear-gradient(181deg, #1e1e22 0%, #4f3f41 50%, #4f3f41 100%);
+background: linear-gradient(181deg, #1e1e22 0%, #4f3f41 50%, #4f3f41 100%);
+        }
+  .servicii{
+    padding-top:50px ;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+} 
+  .meniu{
+    background-color: #f8f2f260;
+    height: 80% ;
+    width: 30%;
+    z-index: 20;
+     position: relative;
+     border-radius: 35px;
+     backdrop-filter: blur(1px);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  .preturi{
+    background-color: #f8f2f260;
+    min-height: 80vh;
+    width: 60%;
+    z-index: 20;
+    padding-top: 50px;
+     position: relative;
+     border-radius: 35px;
+     backdrop-filter: blur(1px);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  .meniu h3{
+	color: #D9BB7D;
+}
+.meniu h1{
+    font-family: 'Bebas Neue', cursive;
+	color: #ffffff;
+	z-index: 200;
+	
+}
+ul li  {
+    margin-left:20px ;
+    margin-right:20px;
+
+  margin-bottom: 10px;
+  border-bottom: 2px #404B51 dotted;
+  font-size: 1.3vmax;
+  line-height: 1;
+}
+
+ul li span:nth-child(odd) {
+  padding-right: 6px; 
+}
+
+ul li span:nth-child(even) {
+  float: right; 
+  padding-left: 6px;
+  color: #fff;
+}
+
+
+li a.list-group-item:active,
+li .list-group-item.active {
+  color: rgb(19, 18, 28);
+
+}
+
+a{
+    color:#fff;
+    }
+    .preturi > div{
+  width: 80%;
+  height: 100px;
+  display: none;
+  font-size: 0.7vmax !important;
+  -webkit-text-stroke: 0.5px black ;
+}
+.preturi > div h3{
+  color:rgb(238, 237, 237);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1vmax;
+  -webkit-text-stroke: 0px  ;
+
+}
+.preturi > div.visible{
+  display: block;
+}
+hr {
+  border: 0;
+  margin: 1.35em auto;
+  max-width: 100%;
+  background-position: 50%;
+  box-sizing: border-box;
+}
+
+.stil {
+  position: relative;
+  border-width: 5px;
+  border-color: hsl(0, 100%, 100%) transparent;
+  height: 11px;
+  border-style: double;
+  width: 100%;
+}
+.stil:before,
+.stil:after {
+  position: absolute;
+  bottom: -3.536px;
+  width: 7.071px;
+  height: 7.071px;
+  display: block;
+  border-width: 0 7.071px 7.071px 0;
+  border-color: hsl(0, 0%, 50%);
+  border-style: double;
+  box-sizing: border-box;
+}
+.stil:before {
+  transform: translateZ(0) rotate(-45deg);
+  left: -21px;
+}
+.stil:after {
+  transform: translateZ(0) rotate(135deg);
+  right: -21px;
+}
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+  font-size:30px;
+}
+
+.next {
+  background-color: #662929;
+  color: white;
+  font-size:30px;
+}
+.preturi  a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 24px 32px;
+  border-radius: 60%;
+  bottom: 5px;
+    position: absolute;
+    
+    transform: translateX(-50%);
+}
+@media screen and (max-width: 1640px) {
+.servicii{
+  padding-top:100px ;
+}
+}
+@media screen and (max-width: 768px) {
+.servicii{
+  display: flex;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.meniu{
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+ul li {
+    margin-left: 0;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    border-bottom: 2px #404B51 dotted;
+    font-size: 3vmax;
+    font-size: 2;
+    padding: 5px;
+}
+.preturi{
+  width: 90%;
+  margin-bottom: 20px;
+}
+.preturi > div{
+  width: 80%;
+  height: 100px;
+  display: none;
+  font-size: 1.8vmax !important;
+  -webkit-text-stroke: 0.5px black ;
+}
+.preturi > div h3{
+  color:rgb(238, 237, 237);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.3vmax;
+  -webkit-text-stroke: 0px  ;
+
+}
+}
+</style>
+<script>
+$( document ).ready(function() {
+      $(".navi li a").click(function(){
+         $('li a.active').removeClass('active');
+         $(this).addClass('active') ;
+    });
+});
+jQuery(function($){
+    $("ul li").click(function(){
+        var id = $(this).attr("id");
+    
+        $(".preturi > div").removeClass("visible");
+        $(".preturi > div." + id).addClass("visible");
+    });
+});
+
+function show(shown, hidden) {
+  document.getElementById(shown).style.display='block';
+  document.getElementById(hidden).style.display='none';
+  return false;
+}
+
+</script>
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+<body>
+    <a class="anchor" name="nav-8"></a>
+    <section class="nav-8">
+      <nav>
+        <a class="item" href="index.html">
+          <div data-text="Pagina principala" class="linktext">Acasa</div>
+        </a>
+        <a class="item" href="despre.html">
+          <div data-text="Vedeti pozele" class="linktext">Despre noi</div>
+        </a>
+        <a class="item" href="contact.html">
+          <div data-text="Povestea noastra" class="linktext">Contact</div>
+        </a>
+        
+        <a class="item" href="produse.html">
+          <div data-text="" class="linktext">Produse</div>
+        </a>
+        <a class="item" href="servicii.html">
+          <div data-text="Pentru nevoile tale" class="linktext">Servicii</div>
+        </a>
+       
+        <a class="item" href="#nav-8">
+          <div data-text="Unde ne gasiti" class="linktext">Evenimente</div>
+        </a>
+      </nav> 
+     
+    </section>
+    <div style="min-height: 100vh;min-width:100%" class="servicii">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 2400 800" opacity="1" style="min-height:100vh ; position:absolute;z-index:1"><g fill="#4f3f41ff" transform="matrix(1,0,0,1,-1.936279296875,149.86295318603516)"><path d="M-10,10C158.75,27.083333333333332,464.58333333333337,104.70833333333333,800,92C1135.4166666666665,79.29166666666667,1266.6666666666665,-40.16666666666667,1600,-51C1933.3333333333335,-61.83333333333333,2181.25,-53.95833333333334,2400,40C2618.75,133.95833333333334,3254.1666666666665,220.83333333333331,2650,400C2045.8333333333335,579.1666666666667,156.25,795.8333333333334,-500,900" transform="matrix(1,0,0,1,0,35)" opacity="0.05"></path><path d="M-10,10C158.75,27.083333333333332,464.58333333333337,104.70833333333333,800,92C1135.4166666666665,79.29166666666667,1266.6666666666665,-40.16666666666667,1600,-51C1933.3333333333335,-61.83333333333333,2181.25,-53.95833333333334,2400,40C2618.75,133.95833333333334,3254.1666666666665,220.83333333333331,2650,400C2045.8333333333335,579.1666666666667,156.25,795.8333333333334,-500,900" transform="matrix(1,0,0,1,0,70)" opacity="0.14"></path><path d="M-10,10C158.75,27.083333333333332,464.58333333333337,104.70833333333333,800,92C1135.4166666666665,79.29166666666667,1266.6666666666665,-40.16666666666667,1600,-51C1933.3333333333335,-61.83333333333333,2181.25,-53.95833333333334,2400,40C2618.75,133.95833333333334,3254.1666666666665,220.83333333333331,2650,400C2045.8333333333335,579.1666666666667,156.25,795.8333333333334,-500,900" transform="matrix(1,0,0,1,0,105)" opacity="0.22"></path><path d="M-10,10C158.75,27.083333333333332,464.58333333333337,104.70833333333333,800,92C1135.4166666666665,79.29166666666667,1266.6666666666665,-40.16666666666667,1600,-51C1933.3333333333335,-61.83333333333333,2181.25,-53.95833333333334,2400,40C2618.75,133.95833333333334,3254.1666666666665,220.83333333333331,2650,400C2045.8333333333335,579.1666666666667,156.25,795.8333333333334,-500,900" transform="matrix(1,0,0,1,0,140)" opacity="0.31"></path><path d="M-10,10C158.75,27.083333333333332,464.58333333333337,104.70833333333333,800,92C1135.4166666666665,79.29166666666667,1266.6666666666665,-40.16666666666667,1600,-51C1933.3333333333335,-61.83333333333333,2181.25,-53.95833333333334,2400,40C2618.75,133.95833333333334,3254.1666666666665,220.83333333333331,2650,400C2045.8333333333335,579.1666666666667,156.25,795.8333333333334,-500,900" transform="matrix(1,0,0,1,0,175)" opacity="0.40"></path><path d="M-10,10C158.75,27.083333333333332,464.58333333333337,104.70833333333333,800,92C1135.4166666666665,79.29166666666667,1266.6666666666665,-40.16666666666667,1600,-51C1933.3333333333335,-61.83333333333333,2181.25,-53.95833333333334,2400,40C2618.75,133.95833333333334,3254.1666666666665,220.83333333333331,2650,400C2045.8333333333335,579.1666666666667,156.25,795.8333333333334,-500,900" transform="matrix(1,0,0,1,0,210)" opacity="0.48"></path><path d="M-10,10C158.75,27.083333333333332,464.58333333333337,104.70833333333333,800,92C1135.4166666666665,79.29166666666667,1266.6666666666665,-40.16666666666667,1600,-51C1933.3333333333335,-61.83333333333333,2181.25,-53.95833333333334,2400,40C2618.75,133.95833333333334,3254.1666666666665,220.83333333333331,2650,400C2045.8333333333335,579.1666666666667,156.25,795.8333333333334,-500,900" transform="matrix(1,0,0,1,0,245)" opacity="0.57"></path><path d="M-10,10C158.75,27.083333333333332,464.58333333333337,104.70833333333333,800,92C1135.4166666666665,79.29166666666667,1266.6666666666665,-40.16666666666667,1600,-51C1933.3333333333335,-61.83333333333333,2181.25,-53.95833333333334,2400,40C2618.75,133.95833333333334,3254.1666666666665,220.83333333333331,2650,400C2045.8333333333335,579.1666666666667,156.25,795.8333333333334,-500,900" transform="matrix(1,0,0,1,0,280)" opacity="0.65"></path><path d="M-10,10C158.75,27.083333333333332,464.58333333333337,104.70833333333333,800,92C1135.4166666666665,79.29166666666667,1266.6666666666665,-40.16666666666667,1600,-51C1933.3333333333335,-61.83333333333333,2181.25,-53.95833333333334,2400,40C2618.75,133.95833333333334,3254.1666666666665,220.83333333333331,2650,400C2045.8333333333335,579.1666666666667,156.25,795.8333333333334,-500,900" transform="matrix(1,0,0,1,0,315)" opacity="0.74"></path><path d="M-10,10C158.75,27.083333333333332,464.58333333333337,104.70833333333333,800,92C1135.4166666666665,79.29166666666667,1266.6666666666665,-40.16666666666667,1600,-51C1933.3333333333335,-61.83333333333333,2181.25,-53.95833333333334,2400,40C2618.75,133.95833333333334,3254.1666666666665,220.83333333333331,2650,400C2045.8333333333335,579.1666666666667,156.25,795.8333333333334,-500,900" transform="matrix(1,0,0,1,0,350)" opacity="0.83"></path><path d="M-10,10C158.75,27.083333333333332,464.58333333333337,104.70833333333333,800,92C1135.4166666666665,79.29166666666667,1266.6666666666665,-40.16666666666667,1600,-51C1933.3333333333335,-61.83333333333333,2181.25,-53.95833333333334,2400,40C2618.75,133.95833333333334,3254.1666666666665,220.83333333333331,2650,400C2045.8333333333335,579.1666666666667,156.25,795.8333333333334,-500,900" transform="matrix(1,0,0,1,0,385)" opacity="0.91"></path><path d="M-10,10C158.75,27.083333333333332,464.58333333333337,104.70833333333333,800,92C1135.4166666666665,79.29166666666667,1266.6666666666665,-40.16666666666667,1600,-51C1933.3333333333335,-61.83333333333333,2181.25,-53.95833333333334,2400,40C2618.75,133.95833333333334,3254.1666666666665,220.83333333333331,2650,400C2045.8333333333335,579.1666666666667,156.25,795.8333333333334,-500,900" transform="matrix(1,0,0,1,0,420)" opacity="1.00"></path></g></svg>
+        <div class="meniu" id="section1">
+           
+                <h1>Servicii</h1> 
+                <br>
+            <ul class="navi" style="cursor:pointer;">
+                <li id="a"><a class="list-group-item">BLEFAROPLASTIE NECHIRURGICALA</a></li>
+                <li id="b"><a class="list-group-item">DERMATOLOGIE</a></li>
+                <li id="c"><a class="list-group-item">PODIATRIE</a></li>
+                <li id="d"><a class="list-group-item">TATUAJE COSMETICE & MICROBLADING</a></li>
+                <li id="e"><a class="list-group-item">MAKEUP</a></li>
+                <li id="f"><a class="list-group-item">ELECTROSTIMULARE</a></li>
+                <li id="g"><a class="list-group-item">REIKI TERAPY</a></li>
+                <li id="j"><a class="list-group-item">TRATAMENTE FACIALE  BRUNO VASSARI INTENSIV</a></li>
+                <li id="k"><a class="list-group-item">FOTOREGENETARE IPL SAU ELIGHT</a></li>
+                <li id="l"><a class="list-group-item">CAUTERIZARE NEGI SAU PAPILOANE VIRALE</a></li>
+                <li id="m"><a class="list-group-item">EPILARE  DEFINITIVA IPL SAU E-LIGHT</a></li>
+                <li id="n"><a class="list-group-item">SPRANCENE</a></li>
+                <li id="o"><a class="list-group-item">GENE</a></li>
+                <li id="p"><a class="list-group-item">EPILARE CORPORALA CU CEARA UNICA FOLOSINTA SAU CEARA TRADITIONALA</a></li>
+                <li id="s"><a class="list-group-item">COSMETICA FACIALA</a></li>
+                <li id="r"><a class="list-group-item">MASAJE CORPORALE</a></li>
+            </ul>
+        
+        
+        </div>
+        <div class="preturi" id="section2">
+        <div class="a">
+          <p>
+            <span style="text-align: left;"><h2 >Riduri periorale „ridurile fumatorului” </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>300 RON</h2></span>
+          <span> <h3 >Ridurile de deasupra buzei superioare (Smoker’s lines/Ridurile fumatorului)</h3></span> 
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2>Riduri periorbitale „talpa gastii”</h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>300 RON</h2></span>
+          <span> <h3 >Reducerea ridurilor si reconstructia intensiva a pielii de la coltul ochilor (talpa gastii)</h3></span> 
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >Pleoape inferioare / 1 sedinta</h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>600 RON</h2></span>
+          <span> <h3 >Blefaroplastie nechirurgicala a pleoapelor superioare si inferioare in caz de ptoza mica sau medie – alternativa minim-invaziva la blefaroplastia chirurgicala</h3></span> 
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >Pleoape superioare / 1 sedinta 	</h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>600 RON</h2></span>
+          <span> <h3 >Blefaroplastie nechirurgicala a pleoapelor superioare si inferioare in caz de ptoza mica sau medie – alternativa minim-invaziva la blefaroplastia chirurgicala</h3></span> 
+          </p>
+          
+          <hr class="stil">
+        
+        </div>
+
+        <div class="b">
+          <p>
+            <span style="text-align: left;"><h2 >Fibrom moale / 1 leziune </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>150 RON</h2></span>
+          <span> <h3 >Fibrom moale / 1 leziune</h3></span> 
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2>Papiloame / 6-10 leziuni >+10 ron/leziune</h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>250 RON</h2></span>
+          <span> <h3 >Papiloame / 6-10 leziuni >+10 ron/leziune</h3></span> 
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >Papiloame / 2-5 leziuni</h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>180 RON</h2></span>
+          <span> <h3 >Papiloame / 2-5 leziuni</h3></span> 
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >Papiloame / 1 leziune	</h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>70 RON</h2></span>
+          <span> <h3 >Papiloame / 1 leziune</h3></span> 
+          </p>
+          
+          <hr class="stil">
+        
+        </div>
+
+        <div class="c">
+          <div id="Page1">
+            <p>
+              <span style="text-align: left;"><h2 >INDEPARTARE COLȚ+PANSAMENT UNGHIE ÎNCARNATĂ </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>150 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2>TRATAMENT TERAPEUTIC FOOT MASK </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>250 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2 >PANSAMENT AUTOADEZIV -TRATAMENT COPOLINE -PLASTURE ARGEINT -PLASTURE SORBALGON </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>180 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2 >DEBRIDARE BILATERALA HIPERKERATOZA PLANTARA 	</h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>70 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2 >Tratament unghie micotica  </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>150 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2>Control Reglaj Talonete </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>250 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+     <center>  <a href="#" class="next"   onclick="return show('Page2','Page1');">&#8250;</a></center>    
+
+          </div>
+          <div id="Page2" style="display:none">
+            <p>
+              <span style="text-align: left;"><h2 >DEBRIDARE UNILATERALA HIPERKERATOZA PLANTARA  </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>150 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2>Evaluare posturală picior puncte de presiune și fisa de tratament </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>250 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2 >Evaluare podologica măsurători talonete </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>180 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2 >Tratament veruca plantara	</h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>70 RON</h2></span>
+            <span> <h3 >Procedura: curățare și tratament veruca (negi) plantara.</h3></span> 
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2 >Pedichiura Medicala  </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>150 RON</h2></span>
+            <span> <h3 >îndepărtare calozitate excesiva, îngrijire unghii și picior cu micoza, curățare cuticule, tratament ragade, durioame și masaj.</h3></span> 
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2>Reconstrucție unghie cu acril medical</h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>250 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+         <center>
+            <a href="#" class="previous" onclick="return show('Page1','Page2');" style="margin-right: 10px;">&#8249;</a>
+            <a href="#" class="next"   onclick="return show('Page3','Page2');">&#8250;</a>
+
+         </center>  
+          </div>
+          <div id="Page3" style="display:none">
+            <p>
+              <span style="text-align: left;"><h2 >Aplicare sistem de corectie unghie incarnata - ARCADA CUBE   </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>150 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2>Batatura interdigitala </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>250 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2 >PANSAMENT OZON / TAMPONADA PERIUNGHIALA  </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>180 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2 >TRATAMENT UNGHIE MICOTICA A 2A SEDINTA	</h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>70 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2 >Consultatie /Examen obiectiv picior   </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>150 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2>Aplicare sistem corectie unghie incarnata UNIBRACE/ UNGHIE </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>250 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2>TRATAMENT UNGHIE INCARNATA  -  PEDIATRIE </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>250 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+          <center>  <a href="#" class="previous" onclick="return show('Page2','Page3');">&#8249;</a>
+          <a href="#" class="next"   onclick="return show('Page4','Page3');">&#8250;</a>
+</center>  
+          </div>
+          <div id="Page4" style="display:none">
+            <p>
+              <span style="text-align: left;"><h2 >Schimbare pansament unghie incarnata  </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>150 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2>Interventie /cauterizare chimica - durom - veruca plantara </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>250 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2 >Debridare unilarerala hiperkeratoza plantara</h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>180 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2 >Interventie tratament podiatric complexitate gr II</h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>70 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2 >Interventie tratament podiatric  complexitate gr I  </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>150 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2>TRATAMENT UNGHIE CU ONICOMICOZA  </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>250 RON</h2></span>
+              <span> <h3 >curățare zona afectata cu freze diamantate si aplicare tratament.</h3></span> 
+            </p>
+            
+            <hr class="stil">
+           
+
+          <center>  <a href="#" class="previous" onclick="return show('Page3','Page4');">&#8249;</a>
+</center>  
+          </div>
+
+        </div>
+
+        <div class="d">
+            <p>
+              <span style="text-align: left;"><h2 >MICROBLADING SPRANCENE </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>400 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2>CONTUR SI MARIRE BUZE CU PIGMENTARE SPRE CENTRUL BUZEI   </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>600 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2 >REPIGMENTARE - PRET 2 SEDINTE </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>500 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2 >TATUAJ UMPLERE BUZE </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>600 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2 >TATUAJ CONTUR BUZE  </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>450 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2>TATUAJ SPRANCENE FIR CU FIR 3D</h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>500 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2 >TATUAJ SPRANCENE FIR CU FIR  </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>500 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2>TATUAJ SPRANCENE PLIN </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>500 RON</h2></span>
+            </p>
+          
+            <hr class="stil">
+          </div>
+
+
+
+
+        <div class="e">
+          <p>
+            <span style="text-align: left;"><h2 >MAKEUP MIREASA  + GENE BANDA PAR NATURAL </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>170 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2>MAKEUP </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>100 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+        </div>
+
+        <div class="f">
+          <p>
+            <span style="text-align: left;"><h2 >Presoterapie picioare partial </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>50 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2>PRESOTERAPIE  brate +picioare + abdomen</h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>80 RON</h2></span>
+            <span> <h3 >presoterapie si drenaj limfatic</h3></span> 
+          </p>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >Electrosatimulre 2 zone  </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>50 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2>Electrostimulare zonal</h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>35 RON</h2></span>
+          </p>
+        
+          <hr class="stil">
+
+        </div>
+
+        <div class="g">
+          <p>
+            <span style="text-align: left;"><h2 >ACCES BARRS </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>100 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2>INFRAROSII </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>40 RON</h2></span>
+          </p>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >BIOENERGO TERAPIE - REIKI   </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>30 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+
+        </div>
+
+        <div class="j">
+          <div id="Page5">
+            <p>
+              <span style="text-align: left;"><h2 > TRATAMENT LAB RADIANCE </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>280 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2>BIOCEUTICALS -GLOBAL FIRMING CARE </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>250 RON</h2></span>
+              <span> <h3 >Tratament intensiv de fermitate si antioxidare. Acest step by step imbunatateste aspectul general al pielii, ajuta in lupta pierderii fermitatii si diminueaza aspectul liniilor de expresie, oferindu-i stralucire naturala si un aspect intinerit.</h3></span> 
+
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2 >Peeling Chimic Anti-Aging</h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>350 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2 >TRATAMENT THALGO COLAGEN MARIN	</h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>350 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2 >TRATAMENT INTENSIV PENTRU TRATAREA PETELOR  </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>220 RON</h2></span>
+              <span> <h3 >
+                Peeling Whitening Peel Treatment ce contine AHA+BHA+Vit. C
+                Concentrat Intensive Whitening Concentrate cu Vit. C, Vit. B3 si extract de lemn dulce
+                Masca Intensive Whitening Mask ce contine Vit. C, extract de strugure si extract de coacaze
+                Crema de zi White Day Protection SPF 15 pentru finalizarea tratamentului
+            </h3></span> 
+
+            </p>
+        
+            
+     <center>  <a href="#" class="next"   onclick="return show('Page6','Page5');">&#8250;</a></center>    
+
+          </div>
+          <div id="Page6" style="display:none">
+            <p>
+              <span style="text-align: left;"><h2>TRATAMENT SIMILAR INJECTIE BOTULINICA  </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>270 RON</h2></span>
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2>TRATAMENT CELULE STEM </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>280 RON</h2></span>
+              <span> <h3 >
+                Cele mai importante efecte ale acestui tratament sunt:
+
+  -  efectele anti-age
+   - efect de lifting facial instant inca de la prima sedinta
+   - prevenirea imbatranirii premature
+   - incetinirea procesului de imbatranire
+   - confera fermitate, hidratare si luminozitate fetei
+   - efect nutritiv si anticearcan
+  -  protectie impotriva radicalilor liberi
+            </h3></span> 
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2 > AQUA GENOMICS HIDRATARE INTENSIVA </h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>170 RON</h2></span>
+              <span> <h3 >
+                Tratament de hidratare naturala. Produsele continute de acest pachet sunt realizate cu activi bazati pe cercetare cosmetogenica. Scopul lor principal este sa stimuleze Factorul Natural de Hidratare (NMF)si sa consolideze in consecinta bariera epidermica. 
+            </h3></span> 
+            </p>
+            
+            <hr class="stil">
+            <p>
+              <span style="text-align: left;"><h2 >PEELENG GLYCO SISTEM 	</h2> </span>
+              <span style="float: right; margin-top: -30px;" ><h2>180 RON</h2></span>
+            <span> <h3 >Tratamentul restabileste si stimuleaza pielea pentru a evita pierderea de apa, mentinand un nivel optim, echilibrand relieful micro-cutanat al pielii, netezind ridurile adanci si eliminandu-le pe cele superficiale.</h3></span> 
+            </p>
+                
+         <center>
+            <a href="#" class="previous" onclick="return show('Page5','Page6');" style="margin-top: -20px;">&#8249;</a>
+
+         </center>  
+          </div>
+
+
+        </div>
+
+        <div class="k">
+          
+          <p>
+          <span style="text-align: left;"><h2>RADIOFRECVENTA</h2> </span>
+          <span style="float: right; margin-top: -30px;" ><h2>130 RON</h2></span>
+          <span> <h3 >RADIOFRECVENTA este una dintre cele mai noi si mai importante terapii inovatoare, non-invaziva, cu rezultate in liftingul facial si un tratament revolutionar ce favorizeaza formarea de colagen prin intermediul unei incalziri in profunzime a pielii. Tehnologia sa, folosita de mult timp in chirurgie, a fost adaptata pentru a fi utilizata in saloanele de infrumusetare.</h3></span> 
+        </p>
+        </p>
+        
+        <hr class="stil">
+        <p>
+          <span style="text-align: left;"><h2 >TRATAMENT FACIAL DEPIGMENTARE</h2> </span>
+          <span style="float: right; margin-top: -30px;" ><h2>160 RON</h2></span>
+        </p>
+        
+        <hr class="stil">
+        <p>
+          <span style="text-align: left;"><h2>TRATAMENT ANTIRID </h2> </span>
+          <span style="float: right; margin-top: -30px;" ><h2>150 RON</h2></span>
+        </p>
+      
+        <hr class="stil"></div>
+
+        <div class="l">
+          <p>
+            <span style="text-align: left;"><h2>CAUTERIZARE NEGI </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>150 RON</h2></span>
+          </p>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >CAUTERIZARE PAPILOANE VIRALE </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>180 RON</h2></span>  
+            <span> <h3 >CAUTERIZARE 10-20 LEZIUNI</h3></span> 
+
+          </p>
+          
+
+        </div>
+
+        <div class="m"> 
+          <div id="Page7">
+
+          <p>
+          <span style="text-align: left;"><h2 >INTREAGA FATA  </h2> </span>
+          <span style="float: right; margin-top: -30px;" ><h2>150 RON</h2></span>
+        </p>
+        
+        <hr class="stil">
+        <p>
+          <span style="text-align: left;"><h2>INGHINAL / FESE </h2> </span>
+          <span style="float: right; margin-top: -30px;" ><h2>196 RON</h2></span>
+        </p>
+        
+        <hr class="stil">
+        <p>
+          <span style="text-align: left;"><h2 >PIEPT SI ABDOMEN </h2> </span>
+          <span style="float: right; margin-top: -30px;" ><h2>300 RON</h2></span>
+        </p>
+        
+        <hr class="stil">
+        <p>
+          <span style="text-align: left;"><h2 >BRATE  </h2> </span>
+          <span style="float: right; margin-top: -30px;" ><h2>210 RON</h2></span>
+        </p>
+        
+        <hr class="stil">
+        <p>
+          <span style="text-align: left;"><h2 >EPILARE MUSTATA /FRUNTE / INTRE SPRANCENE / TAMPLE / DEGETE / PERCIUNI /POMETI / BARBIE / PERIAREOLAR  </h2> </span>
+          <span style="float: right; margin-top: -30px;" ><h2>50 RON</h2></span>
+        </p>
+        
+        <hr class="stil">
+        <p>
+          <span style="text-align: left;"><h2>AXILA</h2> </span>
+          <span style="float: right; margin-top: -30px;" ><h2>90 RON</h2></span>
+        </p>
+        
+        <hr class="stil">
+        <p>
+          <span style="text-align: left;"><h2 >BRATE SI ANTEBRATE   </h2> </span>
+          <span style="float: right; margin-top: -30px;" ><h2>340 RON</h2></span>
+        </p>
+        
+        
+        <center>  <a href="#" class="next"   onclick="return show('Page8','Page7');">&#8250;</a></center>    
+</div>  
+<div id="Page8" style="display:none">
+<p>
+          <span style="text-align: left;"><h2>PICIOARE COMPLET </h2> </span>
+          <span style="float: right; margin-top: -30px;" ><h2>470 RON</h2></span>
+        </p>
+        <hr class="stil">
+        <p>
+          <span style="text-align: left;"><h2>GAMBE </h2> </span>
+          <span style="float: right; margin-top: -30px;" ><h2>200 RON</h2></span>
+        </p>
+        
+        <hr class="stil">
+        <p>
+          <span style="text-align: left;"><h2 >COAPSE </h2> </span>
+          <span style="float: right; margin-top: -30px;" ><h2>310 RON</h2></span>
+        </p>
+        
+        <hr class="stil">
+        <p>
+          <span style="text-align: left;"><h2 >SPATE SI UMERI BARBATI </h2> </span>
+          <span style="float: right; margin-top: -30px;" ><h2>330 RON</h2></span>
+        </p>
+        
+        <hr class="stil">
+        <p>
+          <span style="text-align: left;"><h2 >INTERFESIER </h2> </span>
+          <span style="float: right; margin-top: -30px;" ><h2>60 RON</h2></span>
+        </p>
+        
+        <hr class="stil">
+        <p>
+          <span style="text-align: left;"><h2 >LINIE BIKINI </h2> </span>
+          <span style="float: right; margin-top: -30px;" ><h2>60 RON</h2></span>
+        </p>
+        
+  <center>
+    <a href="#" class="previous" onclick="return show('Page7','Page8');" style="margin-top: -20px;">&#8249;</a>
+
+ </center>  
+</div>
+    </div>
+
+        <div class="n">
+          <p>
+            <span style="text-align: left;"><h2>Laminare sprancene </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>130 RON</h2></span>
+          </p>
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2>Vopsit sprancene </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>20 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >Pensat forma </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>25 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >Pensat </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>25 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+
+        </div>
+
+        <div class="o">
+          <p>
+            <span style="text-align: left;"><h2>Vospit gene</h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>20 RON</h2></span>
+          </p>
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2>Laminare gene </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>110 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+
+        </div>
+
+        <div class="p">
+          <div id="Page9">
+
+            <p>
+            <span style="text-align: left;"><h2 >EPILAT ABDOMEN  </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>30 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2>EPILAT SPATE </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>40 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >EPILAT INGHINAL TOTAL cu anestezic local</h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>45 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >EPILAT COAPSE  </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>20 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >EPILAT MUSTATA</h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>20 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2>EPILAT PICIOARE SCURT</h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>30 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >EPILAT PICIOARE LUNG   </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>50 RON</h2></span>
+          </p>
+          
+          
+          <center>  <a href="#" class="next"   onclick="return show('Page10','Page9');">&#8250;</a></center>    
+  </div>  
+    <div id="Page10" style="display:none">
+  <p>
+            <span style="text-align: left;"><h2>EPILAT BRATE SCURT </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>20 RON</h2></span>
+          </p>
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2>EPILAT BRATE LUNG </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>30 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >EPILAT AXILA </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>20 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >EPILAT INGHINAL PARTIAL </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>20 RON</h2></span>
+          </p>
+                   
+    <center>
+      <a href="#" class="previous" onclick="return show('Page9','Page10');" style="margin-top: -20px;">&#8249;</a>
+  
+   </center>  
+  </div>
+        </div>
+
+        <div class="s">
+
+          <div id="Page11">
+
+            <p>
+            <span style="text-align: left;"><h2 >FOTOTERAPIE FACIAL </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>70 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2>HIDRAPEEL </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>200 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >TRATAMENT MEZOTERAPIE FACIALA INCLUS DECOLTEU </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>400 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >TRATAMENT MEZOTERAPIE FACIALA - ANTI AGING   </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>300 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >EXTRACTII BASIC</h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>120 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2>TRATAMENT BASIC KIANTY EXPERIENCE TEN MATUR </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>180 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >TRATAMENT BASIC KIANTY REGENERATE TEN MATUR REGENERARE  </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>180 RON</h2></span>
+          </p>
+          
+          
+          <center>  <a href="#" class="next"   onclick="return show('Page12','Page11');">&#8250;</a></center>    
+  </div>  
+    <div id="Page12" style="display:none">
+  <p>
+            <span style="text-align: left;"><h2>TRATAMENT TEN ACNEIC + EXTRACTII </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>180 RON</h2></span>
+          </p>
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2>TRATAMENT BASIC AHA  OXIGENARE A PIELIINCU ACID GLICOLIC  </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>180 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >TRATAMENT BASIC ANTISTRES TERAPII PT TEN MIXT </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>180 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >TRATAMENT BASIC DE ALBIRE PT PIELE PIGMENTATA</h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>180 RON</h2></span>
+          </p>
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >TRATAMENT BASIC TEN SENSIBIL / CUPEROTIC SKINCONFORT</h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>180 RON</h2></span>
+          </p>   
+    <center>
+      <a href="#" class="previous" onclick="return show('Page11','Page12');">&#8249;</a>
+  
+   </center> 
+    </div>
+
+        </div>
+
+        <div class="r">
+          
+          <div id="Page13">
+
+            <p>
+            <span style="text-align: left;"><h2 >vaccum bipolar radio frecventa </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>80 RON</h2></span>
+            <span> <h3 >tratament anticelulitic VaccumVACUUM BIPOLAR RF – Sedintele de vacuum bipolar cu radiofrecventa este unul dintre cele mai eficiente tratamente anticelulitice pentru toate gradele celulitei. Dizolva grasimea, drenaj limfatic, ajuta la fermitatea pielii si sporeste elasticitatea.</h3></span> 
+
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2>Hot Stone Massage  </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>160 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >MASAJ VIP </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>150 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >Crio shok</h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>80 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+          
+          <p>
+            <span style="text-align: left;"><h2>TERMO SLIM CU FIOLA </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>100 RON</h2></span>
+            <span> <h3 >Împachetările la termocuvertă sunt o etapă indispensabilă în cadrul  tratamentului anticelulitic prin împachetări cu produse care favorizează eliminarea celulitei și arderea grăsimilor. </h3></span> 
+
+          </p>
+          
+          
+          
+          
+          <center>  <a href="#" class="next"   onclick="return show('Page14','Page13');">&#8250;</a></center>    
+  </div>  
+    <div id="Page14" style="display:none">
+     
+      <p>
+        <span style="text-align: left;"><h2 >Reflexoterapie </h2> </span>
+        <span style="float: right; margin-top: -30px;" ><h2>60 RON</h2></span>
+      </p>
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >MASAJ RELAXARE CU MASAJ ANTICELULITIC  </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>90 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >MASAJ ANTICELULITIC  </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>45 RON</h2></span>
+          </p>
+          
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >MASAJ RELAXARE GENERAL</h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>80 RON</h2></span>
+          </p>
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >MASAJ TERAPEUTIC SPATE </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>45 RON</h2></span>
+            <span> <h3 >MASAJUL SPATELUI - TERAPEUTIC
+              Include si crema antiinflamatoare
+            </h3></span> 
+
+          </p>   
+          <hr class="stil">
+          <p>
+            <span style="text-align: left;"><h2 >MASAJ CU BAMBUS  </h2> </span>
+            <span style="float: right; margin-top: -30px;" ><h2>90 RON</h2></span>
+            <span> <h3 >MASAJ CU BETE DE BAMBUS - TONIFIANT - SPORTIV- ANTICELULITIC</h3></span> 
+          </p>   
+    <center>
+      <a href="#" class="previous" onclick="return show('Page13','Page14');">&#8249;</a>
+  
+   </center> 
+    </div>
+
+        
+        
+        </div>
+</div>
+</div>
+
+</body>
+<footer class="footer">
+    <div class="footer-left col-md-4 col-sm-6">
+      <p class="despre">
+        <span>Podoclinic & Centrul Estetic Sano Dermis
+  </span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, culpa. Nemo perferendis quibusdam esse autem aliquid suscipit quasi facere dolore explicabo iusto ducimus dolor, quos dolorem expedita veritatis natus fuga?      </p>
+    
+    </div>
+    <div class="footer-center col-md-4 col-sm-6">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span> Curtea de Arges</span>Arges, Romania</p>
+      </div>
+      <div>
+        <i class="fa fa-phone"></i>
+        <p> +40 745 408 416</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:test@gmail.com" > test@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="footer-right col-md-4 col-sm-6">
+      <h2> Sano<span> Dermis</span></h2>
+      <p class="menu">
+        | <a href="index.html">Acasă</a> |
+      <a href="despre.html">Despre noi</a> |
+      <a href="inchirieri.html">Contact</a> |
+      <a href="evenimente.html">Servicii</a> |
+      <a href="contact.html">Produse</a> |
+      </p>
+      <p class="name"> Sano Dermis &copy; 2016</p>
+    </div>
+  </footer>
+</html>

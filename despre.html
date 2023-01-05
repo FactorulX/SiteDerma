@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Despre noi</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/footer.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+<style>
+ 
+    	@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+     .info{
+    min-width: 100%;
+    min-height: 90vh;
+    background-color: #1e1e22;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .clip0{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 98% 87%, 95% 75%, 92% 66%, 88% 59%, 82% 52%, 73% 43%, 66% 36%, 56% 27%, 51% 23%, 41% 15%, 32% 9%, 26% 6%);
+	background-color: #4F3F41;
+	min-width: 100%;
+	min-height: 100vh;
+	position: absolute;
+	z-index: 1;
+    margin-top: 94px;
+  }
+  .clip{
+	clip-path: polygon(96% 13%, 100% 0, 100% 100%, 0 100%, 0 84%, 43% 79%, 63% 65%, 77% 51%, 86% 37%, 93% 24%);
+	background-color: #4F3F41;
+	min-width: 100%;
+	min-height: 100vh;
+	position: absolute;
+	z-index: 1;
+  }
+  body{
+    overflow: auto;
+    font-family: 'Bebas Neue', cursive !important; 
+    background-color: #1e1e22 ;
+
+  }
+  .info .poza{
+	width: auto;
+    max-height: 60vh;
+	z-index: 100;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;  }
+  .article{
+    MAX-width: 25vw;
+    min-height: 50vh;
+	color: #D9BB7D;
+	z-index: 200;
+	
+  }
+ 
+
+  .info .poza img{
+    width: auto;
+    height: 60vh;
+	z-index:100;
+	
+  }
+  .clip2{
+	clip-path: polygon(0 0, 100% 0, 100% 7%, 81% 15%, 54% 29%, 22% 56%, 0 79%);
+	background-color: #4F3F41;
+	min-width: 100%;
+	min-height: 100vh;
+	position: absolute;
+	z-index: 1;
+  }
+  .clip3{
+	clip-path: polygon(100% 100%, 100% 44%, 78% 59%, 52% 66%, 21% 57%, 0 44%, 0 100%, 27% 100%, 56% 100%, 79% 100%);
+	background-color: #4F3F41;
+	min-width: 100%;
+  min-height: 90vh;
+	position: absolute;
+	z-index: 1;
+  }
+
+  .clip4{
+	clip-path: polygon(0 0, 100% 0, 100% 77%, 81% 75%, 69% 72%, 51% 65%, 33% 54%, 18% 43%, 8% 31%, 0 14%);
+	background-color: #4F3F41 ;
+	min-width: 100%;
+	min-height: 100vh;
+	position: absolute;
+	z-index: 1;
+	margin-top: -10%;
+  }
+  .clip5{
+	clip-path: polygon(0 0, 100% 0, 100% 7%, 81% 15%, 54% 29%, 22% 56%, 0 79%);
+
+	background-color: #382325;
+	min-width: 100%;
+	min-height: 100.5%;
+	position: absolute;
+	z-index: -1;
+  }
+
+  .clip6{
+  clip-path: polygon(0% 100%, 3% 100%, 8% 99%, 12% 98%, 19% 98%, 23% 96%, 30% 96%, 33% 95%, 35% 95%, 40% 94%, 44% 94%, 49% 93%, 54% 91%, 57% 90%, 61% 88%, 66% 87%, 69% 85%, 75% 83%, 78% 81%, 81% 83%, 88% 78%, 94% 76%, 94% 75%, 98% 71%, 100% 69%, 100% 100%);
+
+	background-color: #1e1e22;
+	min-width: 100%;
+	min-height: 100.5%;
+	position: absolute;
+	z-index: 200;
+  }
+  .clip7{
+    clip-path: polygon(0% 23%, 5% 23%, 13% 21%, 16% 21%, 17% 22%, 24% 22%, 32% 21%, 41% 20%, 49% 18%, 52% 18%, 57% 16%, 63% 14%, 70% 13%, 77% 11%, 81% 10%, 86% 8%, 91% 6%, 95% 5%, 99% 3%, 100% 1%, 100% 0, 0% 0%);
+
+	background-color: #1e1e22;
+	min-width: 100%;
+	min-height: 100.5%;
+	position: absolute;
+	z-index: 200;
+  }
+ 
+  .crossfade{
+    min-height: 100vh;
+    min-width: 100%;
+    z-index: 3003;
+  }
+  .crossfade > figure {
+  animation: imageAnimation 30s linear infinite 0s;
+  backface-visibility: hidden;
+  background-size: cover;
+  background-position: center center;
+  color: transparent;
+  height: 100%;
+  margin-top: 0%;
+  margin-left: 0px;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+.crossfade > figure:nth-child(1) { background-image: url('poze/1.jpg'); }
+.crossfade > figure:nth-child(2) {
+  animation-delay: 6s;
+  background-image: url('poze/2.jpg');
+}
+.crossfade > figure:nth-child(3) {
+  animation-delay: 12s;
+  background-image: url('poze/3.jpg');
+}
+.crossfade > figure:nth-child(4) {
+  animation-delay: 18s;
+  background-image: url('poze/4.jpg');
+}
+.crossfade > figure:nth-child(5) {
+  animation-delay: 24s;
+  background-image: url('poze/5.jpg');
+}
+.crossfade > figure:nth-child(6) {
+  animation-delay: 30s;
+  background-image: url('poze/6.jpg');
+}
+.crossfade > figure:nth-child(7) {
+  animation-delay: 36s;
+  background-image: url('poze/7.jpg');
+}
+.crossfade > figure:nth-child(8) {
+  animation-delay: 42s;
+  background-image: url('poze/8.jpg');
+}
+
+@keyframes 
+imageAnimation {  0% {
+ animation-timing-function: ease-in;
+ opacity: 0;
+}
+ 8% {
+ animation-timing-function: ease-out;
+ opacity: 1;
+}
+ 17% {
+ opacity: 1
+}
+ 25% {
+ opacity: 0
+}
+ 100% {
+ opacity: 0
+}
+}
+@media screen and (max-width: 1100px) {
+    .clip2 h2{
+      font-size: 7em ;
+    }
+    .info .poza{
+      width: 60%;
+      min-height: auto;
+      z-index: 100;
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;  }
+    .article{
+      MAX-width: 25vw;
+      min-height: 50vh;
+      font-family: 'Bebas Neue', cursive;
+      color: #D9BB7D;
+      z-index: 200;
+    font-size: 1vmax !important;
+      
+    }
+   h2{
+    font-size: 2.6vmax !important; 
+   }
+  h1{
+    font-size: 5.5vmax;
+  }
+    .info .poza img{
+      width: auto;
+      height: auto;
+      z-index:100;
+      
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .info {
+  
+      display: flex !important;
+  
+      flex-direction: column-reverse !important;
+  
+  }
+    .info .poza{
+      width: 90%;
+    
+    }
+    .article{
+      MAX-width: 100%;
+      padding: 30px;
+      min-height: 10vh;
+      
+    }
+   h2{
+    font-size: 4vmax !important; 
+   }
+  h1{
+    font-size: 5.5vmax;
+  }
+    .info .poza img{
+      width: auto;
+      height: auto;
+      z-index:100;
+      
+    }
+
+  }
+    </style>
+    <body>
+        <a class="anchor" name="nav-8"></a>
+        <section class="nav-8">
+          <nav>
+            <a class="item" href="index.html">
+              <div data-text="Pagina principala" class="linktext">Acasa</div>
+            </a>
+            <a class="item" href="despre.html">
+              <div data-text="Vedeti pozele" class="linktext">Despre noi</div>
+            </a>
+            <a class="item" href="contact.html">
+              <div data-text="Povestea noastra" class="linktext">Contact</div>
+            </a>
+            
+            <a class="item" href="produse.html">
+              <div data-text="" class="linktext">Produse</div>
+            </a>
+            <a class="item" href="servicii.html">
+              <div data-text="Pentru nevoile tale" class="linktext">Servicii</div>
+            </a>
+           
+            <a class="item" href="#nav-8">
+              <div data-text="Unde ne gasiti" class="linktext">Evenimente</div>
+            </a>
+          </nav> 
+         
+        </section>
+        <div class="clip6"></div>
+           <div class="article" style="position:absolute;   top: 60%;left: 50%;transform: translate(-50%, -50%); -webkit-text-stroke-width: 0.1px; -webkit-text-stroke-color: #000000; max-width: 100vw !important;">
+          <h1 style="font-size: 8em;">Podoclinic & Centrul Estetic Sano Dermis          </h1>
+        </div>
+    
+       
+        <div class="clip7"></div>
+
+        <div class="crossfade">
+            <figure></figure>
+             <figure></figure>
+             <figure></figure>
+             <figure></figure>
+             <figure></figure>
+           </div>
+        <div class="info">
+                 <div class="poza">
+                   <img src="poze/DSC_0591.JPG" alt="">
+                 </div>
+                   <div class="article">
+                     <h4>Despre noi</h4>
+                     <h1>Salonul SanoDermis</h1>
+                     <br>
+                     <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio aliquam nihil eligendi accusamus commodi natus. Sunt ducimus maiores quas culpa vel, sit fuga quidem neque voluptatum totam ut deleniti magni.</h2>
+                   </div>
+                   
+             </div>
+             <div class="info" style="flex-direction: row-reverse">
+                <div class="clip"></div>
+                     <div class="poza">
+                       <img src="poze/2.JPG" alt="">
+                     </div>
+                       <div class="article">
+                         <h4>Despre noi</h4>
+                         <h1>Salonul SanoDermis</h1>
+                         <br>
+                         <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio aliquam nihil eligendi accusamus commodi natus. Sunt ducimus maiores quas culpa vel, sit fuga quidem neque voluptatum totam ut deleniti magni.</h2>
+                       </div>
+                       
+                 </div>
+                 <div class="info">
+                    <div class="clip2"></div>
+                         <div class="poza">
+                           <img src="poze/3.JPG" alt="">
+                         </div>
+                           <div class="article">
+                             <h4>Despre noi</h4>
+                             <h1>Salonul SanoDermis</h1>
+                             <br>
+                             <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio aliquam nihil eligendi accusamus commodi natus. Sunt ducimus maiores quas culpa vel, sit fuga quidem neque voluptatum totam ut deleniti magni.</h2>
+                           </div>
+                           
+                     </div>
+                     <div class="info" style="flex-direction: row-reverse">
+                        <div class="clip3"></div>
+                             <div class="poza">
+                               <img src="poze/4.JPG" alt="">
+                             </div>
+                               <div class="article">
+                                 <h4>Despre noi</h4>
+                                 <h1>Salonul SanoDermis</h1>
+                                 <br>
+                                 <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio aliquam nihil eligendi accusamus commodi natus. Sunt ducimus maiores quas culpa vel, sit fuga quidem neque voluptatum totam ut deleniti magni.</h2>
+                               </div>
+                               
+                              </div>
+
+                              
+ </body>
+<footer class="footer">
+    <div class="footer-left col-md-4 col-sm-6">
+      <p class="despre">
+        <span>Podoclinic & Centrul Estetic Sano Dermis
+  </span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, culpa. Nemo perferendis quibusdam esse autem aliquid suscipit quasi facere dolore explicabo iusto ducimus dolor, quos dolorem expedita veritatis natus fuga?      </p>
+    
+    </div>
+    <div class="footer-center col-md-4 col-sm-6">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span> Curtea de Arges</span>Arges, Romania</p>
+      </div>
+      <div>
+        <i class="fa fa-phone"></i>
+        <p> +40 745 408 416</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:test@gmail.com" > test@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="footer-right col-md-4 col-sm-6">
+      <h2> Sano<span> Dermis</span></h2>
+      <p class="menu">
+        | <a href="index.html">Acasă</a> |
+      <a href="despre.html">Despre noi</a> |
+      <a href="inchirieri.html">Contact</a> |
+      <a href="evenimente.html">Servicii</a> |
+      <a href="contact.html">Produse</a> |
+      </p>
+      <p class="name"> Sano Dermis &copy; 2016</p>
+    </div>
+  </footer>

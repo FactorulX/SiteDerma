@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Produse</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+</head>
+<style>
+    	@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+        html,body{
+    overflow: auto;
+	font-family: 'Bebas Neue', cursive !important;
+  background-color:#1e1e22;
+
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@500&display=swap');
+  .produse{
+    margin-top: 100px !important;
+    padding: 30px;
+
+  }
+  .produs{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    height: 500px;
+    position: relative;
+    border-radius: 4%;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-family: 'Ubuntu', sans-serif;
+    align-items: stretch;
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    color: #D9BB7D;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: nowrap;
+    background-color: rgba(240, 255, 249, 0.075);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  }
+  .produs img{
+    border-radius: 4%;
+    width: auto;
+    height: 200px;
+    background-color: #fff;
+  }
+  .produs span{
+    color:#fff;
+    font-size: 3px !important;
+  }
+  .produs h4{
+    font-size: 0.8vmax;
+  }
+  .produs h3{
+    font-size: 1.2vmax;
+  }
+  .marca{
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+ 
+
+  hr {
+  border: 0;
+  margin: 1.35em auto;
+  max-width: 100%;
+  background-position: 50%;
+  box-sizing: border-box;
+}
+hr + h2 {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  margin: 0;
+  padding: 5px 10px;
+  border: 1px solid #453986;
+  transform: translate(-50%,-100%);
+
+
+  color: #0e0d14;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #D9BB7D;
+
+}
+hr + h2::first-letter {
+  margin-left: 0.32em;
+}
+
+/* Alternative transform: translate */
+hr + h2 {
+  border-width: 1px 0;
+}
+hr + h2::before, hr + h2::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #453986;
+  content: "";
+}
+hr + h2::before {
+  left: 0;
+}
+hr + h2::after {
+  right: 0;
+}
+.stil {
+  position: relative;
+  border-width: 5px;
+  border-color: #D9BB7D transparent;
+  height: 11px;
+  border-style: double;
+  width: 100%;
+}
+.stil:before,
+.stil:after {
+  position: absolute;
+  bottom: -3.536px;
+  width: 7.071px;
+  height: 7.071px;
+  display: block;
+  border-width: 0 7.071px 7.071px 0;
+  border-color: hsl(0, 0%, 50%);
+  border-style: double;
+  box-sizing: border-box;
+}
+.stil:before {
+  transform: translateZ(0) rotate(-45deg);
+  left: -21px;
+}
+.stil:after {
+  transform: translateZ(0) rotate(135deg);
+  right: -21px;
+}
+.info{
+    min-width: 100%;
+    min-height: 90vh;
+    background-color: #1e1e22;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .info .poza{
+	width: auto;
+    max-height: 60vh;
+	z-index: 100;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;  }
+  .article{
+    MAX-width: 25vw;
+    min-height: 50vh;
+	color: #D9BB7D;
+	z-index: 200;
+	
+  }
+ 
+
+  .info .poza img{
+    width: auto;
+    height: 60vh;
+	z-index:100;
+	
+  }
+  @media screen and (max-width: 1100px) {
+    .clip2 h2{
+      font-size: 7em ;
+    }
+    .info .poza{
+      width: 60%;
+      min-height: auto;
+      z-index: 100;
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;  }
+    .article{
+      MAX-width: 25vw;
+      min-height: 50vh;
+      font-family: 'Bebas Neue', cursive;
+      color: #D9BB7D;
+      z-index: 200;
+    font-size: 1vmax !important;
+      
+    }
+   h2{
+    font-size: 2.6vmax !important; 
+   }
+  h1{
+    font-size: 5.5vmax;
+  }
+    .info .poza img{
+      width: auto;
+      height: auto;
+      z-index:100;
+      
+    }
+    .info{
+      padding-top: 100px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .produs{
+      width: 30%;
+    }
+    .info {
+  
+      display: flex !important;
+  
+      flex-direction: column !important;
+  
+  }
+    .info .poza{
+      width: 90%;
+    
+    }
+    .article{
+      MAX-width: 100%;
+      padding: 30px;
+      min-height: 10vh;
+      
+    }
+   h2{
+    font-size: 4vmax !important; 
+   }
+  h1{
+    font-size: 5.5vmax;
+  }
+    .info .poza img{
+      width: auto;
+      height: auto;
+      z-index:100;
+      
+    }
+    .produs h4 {
+    font-size: 1.4vmax;
+}
+  .produs h3{
+    font-size: 2vmax;
+  }
+
+  }
+  @media screen and (max-width: 425px) {
+  .produs{
+width: 45%;
+  }
+  }
+  </style>
+<body>
+    <a class="anchor" name="nav-8"></a>
+    <section class="nav-8">
+   <nav>
+        <a class="item" href="index.html">
+          <div data-text="Pagina principala" class="linktext">Acasa</div>
+        </a>
+        <a class="item" href="despre.html">
+          <div data-text="Vedeti pozele" class="linktext">Despre noi</div>
+        </a>
+        <a class="item" href="contact.html">
+          <div data-text="Povestea noastra" class="linktext">Contact</div>
+        </a>
+        
+        <a class="item" href="produse.html">
+          <div data-text="" class="linktext">Produse</div>
+        </a>
+        <a class="item" href="servicii.html">
+          <div data-text="Pentru nevoile tale" class="linktext">Servicii</div>
+        </a>
+       
+        <a class="item" href="#nav-8">
+          <div data-text="Unde ne gasiti" class="linktext">Evenimente</div>
+        </a>
+      </nav> 
+     
+    </section>
+
+      <div class="info">
+        <div class="poza">
+          <img src="poze/DSC_0603.JPG" alt="">
+        </div>
+          <div class="article">
+            <h4>Produse</h4>
+            <h1> Bruno Vassari</h1>
+            <br>
+            <h2>
+              Bruno Vassari este cel mai utilizat brand de cosmetice profesionale in saloanele de succes din Romania.
+              Brandul de cosmetice profesionale de top cu ingrediente atent selectionate destinate tratamentelor faciale si corporale 
+              pune la dispozitie linii de produse concepute pentru tratarea eficienta a problemelor dermato-cosmetice oferind rezultate
+               vizibile inca de la prima utilizare.
+
+
+
+
+
+            </h2>
+          </div>
+          
+     </div>
+    <div class="produse">
+      <hr class="stil"/>
+      <h2>
+        Bruno Vasari
+      </h2>
+      <div class="marca">
+       
+          <div class="produs">
+              <img src="produse/kianty.jpg" alt="">
+              <h3>Kianty Experience</h3>
+              <h4>
+                Crema anti-imbatranire contine ingrediente active si reprezinta un tratament complet impotriva tuturor tipurilor de riduri. Rezultatele devin vizibile in primele 30 de zile de tratament.
+
+              </h4>
+              <span>  <h3>RON</h3></span>
+          </div>
+
+          <div class="produs">
+            <img src="produse/vigna.jpg" alt="">
+            <h3> PIOGGIA DI VIGNA KIANTY EXPERIENCE</h3>
+            <h4>
+              Lotiune tonica cu extract de strugure si actiune anti-imbatranire. Contine oligoelemente si minerale (iod, fer, zinc, magneziu, cupru, potasiu, sulf, fosfor si mangan), vitamine (B3, B4, A si C) si polizaharide, care au un efect regenerant, de fermitate si revitalizant asupra pielii.
+Complex de alge marine (Aonori, Ascophyllum, Criste Marine, Fuscus, Laminaria Digitata si Nori) si extract de struguri.
+            </h4>
+            <span>  <h3>RON</h3></span>
+        </div>
+        
+        <div class="produs">
+          <img src="produse/lotiune-demachianta-cu-acid-glicolic-250-ml-aha-skin-cleanser-bruno-vassari.jpg" alt="">
+          <h3>Lotiune Faciala de Curatare cu Acid Glicolic </h3>
+          <h4>
+            Lotiune faciala cu acid glicolic ce curata profund si pregateste pielea pentru tratamente cu AHA(Alfa-hidroxi-acizi) aplicate ulterior. Poate fi utilizat si ca tonic.
+
+
+          </h4>
+          <span>  <h3>RON</h3></span>
+      </div>
+      <div class="produs">
+        <img src="produse/tonic-ten-sensibil-si-cuperotic-bazata-pe-extracte-vegetale-refreshing-toner.jpg" alt="">
+        <h3>Lotiune Tonica pentru Tenul Sensibil Bruno Vassari Refreshing Toner 250ml</h3>
+        <h4>
+          Lotiune tonica ce îndeparteaza resturile produselor de curatare si demachiere si elimina celulele moarte ce se acumuleaza pe suprafata epidermei pe parcursul zilei. Refreshing Toner lasa pielea curata, neteda si hidratata.
+
+
+        </h4>
+        <span>  <h3>RON</h3></span>
+    </div>
+    <div class="produs">
+      <img src="produse/lapte-demachiant-ten-normal-si-sensibil-bazat-pe-extract-de-ceai-verde-si-alantoina-fresh-cleansing-fluid.jpg" alt="">
+      <h3>Lotiune Demachianta Hidratanta Bruno Vassari Fresh Cleansing Fluid 250ml</h3>
+      <h4>
+        Lotiune demachianta blanda pentru tenul sensibil. Fresh Cleansing Fluid indeparteaza machiajului si excesul de reziduri uleioase. Formula nu contine emulsifiant si parfum fiind perfecta pentru a echilibra si restabili conditiile cutanate fiziologice normale.
+
+
+      </h4>
+      <span>  <h3>RON</h3></span>
+  </div>
+  <div class="produs">
+    <img src="produse/milky.jpg" alt="">
+    <h3>Tonic sub forma de lapte Bruno Vassari Clarifying Milky Toner 200ml
+    </h3>
+    <h4>
+      Tonic usor care completeaza ingrijirea zilnica a tenului.
+
+
+    </h4>
+    <span>  <h3>RON</h3></span>
+</div>
+<div class="produs">
+  <img src="produse/crema-hidratanta-destinata-tenului-normal-si-mixt-50ml-aqua-genomics-sorbet-light-bruno-vassari.jpg" alt="">
+  <h3>Crema hidratanta pentru ten normal si gras Bruno Vassari Aqua Sorbet Light 50ml
+  </h3>
+  <h4>
+    Crema hidratanta pentru ten normal si gras/uleios. Aceasta stimuleaza selectiv componentele hidratante naturale ale pielii si ajuta la mentinerea echilibrului hidro-lipidic.
+
+
+  </h4>
+  <span>  <h3>RON</h3></span>
+</div>
+<div class="produs">
+  <img src="produse/crema-cu-polifenoli-pentru-utilizare-zilnica-50ml-mosto-kianty-experience-bruno-vassari.jpg" alt="">
+  <h3>Crema Fluida cu Extract de Struguri Bruno Vassari Mosto Kianty 50ml
+  </h3>
+  <h4>
+    Crema hidratanta cu polifenoli din struguri, vitamine si oligoelemente ce protejeaza pielea impotriva radicalilor liberi si are actiune de revitalizare asupra tenului.
+
+
+  </h4>
+  <span>  <h3>RON</h3></span>
+</div>
+ <div class="produs">
+      <img src="produse/Duva.jpg" alt="">
+      <h3>
+        Crema Activa Anti-Age Bruno Vassari Pate D’uva 50ml
+
+      </h3>
+      <h4>
+        Crema anti-age cu extract din seminte de struguri si vitamina E.
+
+
+    
+      </h4>
+      <span>  <h3>RON</h3></span>
+    </div>
+    <div class="produs">
+      <img src="produse/crema-tratament-pentru-tenul-gras-oil-free-moisturizing-gel-pure-solution.jpg" alt="">
+      <h3>
+        Crema- Gel tratament pentru tenul gras Bruno Vassari Oil Free Moisturizing Gel Pure Solution 50ml
+
+      </h3>
+      <h4>
+    
+        Gel adresat tenului gras ce asigura un grad optim de hidratare. Protejeaza echilibrul natural al pielii, pentru o piele fara probleme. Absorbtie rapida, ofera un aspect sanatos si mat.
+
+
+      </h4>
+      <span>  <h3>RON</h3></span>
+    </div>
+    <div class="produs">
+      <img src="produse/gel-de-curatare-pentru-tenul-gras-150ml-cleansing-gel-pure-solution-bruno-vassari.jpg" alt="">
+      <h3>
+        Gel Purificator de Curatare pentru Ten Gras/Uleios Bruno Vassari Cleansing Gel Pure Solution 150ml
+
+      </h3>
+      <h4>
+    
+        Gel pentru curatare in profunzime si demachiere. Elimina toate impuritatile pielii, inchide porii si normalizeaza secretia de sebuum.
+
+
+      </h4>
+      <span>  <h3>RON</h3></span>
+    </div>
+    <div class="produs">
+      <img src="produse/crema-pentru-ten-gras-si-acneic-50ml-balance-fluid-pure-solution-bruno-vassari.jpg" alt="">
+      <h3>
+        Emulsie Matifianta si Hidratanta pentru Ten Gras/Uleios Bruno Vassari Balance Fluid Pure Solution 50ml
+
+      </h3>
+      <h4>
+        Balance Fluid este o emulsie hidratanta FARA ulei ce elimina luciul datorat excesului de sebum si lasa tenul catifelat si matifiat.
+
+
+    
+      </h4>
+      <span>  <h3>RON</h3></span>
+    </div>
+    
+        </div>
+</div>
+    </div>
+      
+   
+
+</body>
+<footer class="footer">
+    <div class="footer-left col-md-4 col-sm-6">
+      <p class="despre">
+        <span>Podoclinic & Centrul Estetic Sano Dermis
+  </span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, culpa. Nemo perferendis quibusdam esse autem aliquid suscipit quasi facere dolore explicabo iusto ducimus dolor, quos dolorem expedita veritatis natus fuga?      </p>
+    
+    </div>
+    <div class="footer-center col-md-4 col-sm-6">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span> Curtea de Arges</span>Arges, Romania</p>
+      </div>
+      <div>
+        <i class="fa fa-phone"></i>
+        <p> +40 745 408 416</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:test@gmail.com" > test@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="footer-right col-md-4 col-sm-6">
+      <h2> Sano<span> Dermis</span></h2>
+      <p class="menu">
+        | <a href="index.html">Acasă</a> |
+      <a href="despre.html">Despre noi</a> |
+      <a href="inchirieri.html">Contact</a> |
+      <a href="evenimente.html">Servicii</a> |
+      <a href="contact.html">Produse</a> |
+      </p>
+      <p class="name"> Sano Dermis &copy; 2016</p>
+    </div>
+  </footer>
+</html>
